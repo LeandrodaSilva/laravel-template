@@ -16,10 +16,6 @@ jobs:
       with:
         php-version: '8.0'
     - uses: actions/checkout@v2
-    - name: Change permissions
-      run: chown -R leandro:leandro .
-    - name: Stop aplication
-      run: php artisan down
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Update
@@ -28,4 +24,8 @@ jobs:
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
+    - name: Run migration
+      run: php artisan migrate
+    - name: Optimize
+      run: php artisan optimize
     
