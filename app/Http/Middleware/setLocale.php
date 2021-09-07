@@ -19,20 +19,22 @@ class setLocale
      */
     public function handle(Request $request, Closure $next)
     {
-        function getLanguage($language) {
-            switch ($language) {
-                case 'pt_BR':
-                    return 'pt-br';
-
-                default: return $language;
-            }
-        }
-
         if ($request->method() === 'GET') {
             if ($request->cookie(self::LOCALE_KEY) && App::getLocale() !== $request->cookie(self::LOCALE_KEY)) {
                 $request->session()->put(self::LOCALE_KEY, $request->cookie(self::LOCALE_KEY));
             } elseif (!$request->cookie(self::LOCALE_KEY)) {
-                $request->session()->put(self::LOCALE_KEY, getLanguage($request->getPreferredLanguage(config('app.languages'))));
+                $language = $request->getPreferredLanguage(config('app.languages'));
+                $lang = '';
+
+                switch ($language) {
+                    case 'pt_BR':
+                        $lang = 'pt-br';
+                        break;
+
+                    default: $lang = $language;
+                }
+
+                $request->session()->put(self::LOCALE_KEY, $lang);
             }
 
             App::setLocale($request->session()->get(self::LOCALE_KEY));
