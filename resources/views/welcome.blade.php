@@ -414,7 +414,7 @@
 
                 @if (Route::has('register'))
                     <a href="{{ route('register') }}"
-                       class="ml-4 text-sm text-gray-700 underline">{{ __("Register") }}</a>
+                       class="ml-4 text-sm text-gray-500 underline">{{ __("Register") }}</a>
                 @endif
             @endauth
         </div>
