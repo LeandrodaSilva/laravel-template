@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('language/{locale}', [\App\Http\Controllers\LocaleController::class, 'setLocale'])
+    ->name('language.switch');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +24,16 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/teste', function (Request $request) {
+    function getLanguage($language) {
+        switch ($language) {
+            case 'pt_BR':
+                return 'pt-br';
+
+            default: return $language;
+        }
+    }
+
+    return getLanguage($request->getPreferredLanguage(config('app.languages')));
+});
