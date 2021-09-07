@@ -23,7 +23,7 @@ jobs:
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
     - name: Run migrations
-      run: php artisan migrate
+      run: php artisan migrate --force
     - name: Link storage
       run: php artisan storage:link
     - name: Optimize
