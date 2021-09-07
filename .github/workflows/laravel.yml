@@ -28,8 +28,8 @@ jobs:
       run: php artisan storage:link
     - name: Optimize
       run: php artisan optimize
-    - name: NPM install
-      run: npm install
-    - name: Generate assets
-      run: npm run prod
+#     - name: NPM install
+#       run: npm install
+#     - name: Generate assets
+#       run: npm run prod
     
