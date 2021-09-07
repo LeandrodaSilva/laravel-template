@@ -109,5 +109,12 @@
     "Close": "Fechar",
     "API Token Permissions": "Permissões De Token De API",
     "Delete API Token": "Excluir Token API",
-    "Are you sure you would like to delete this API token?": "Tem certeza de que deseja excluir este token de API?"
+    "Are you sure you would like to delete this API token?": "Tem certeza de que deseja excluir este token de API?",
+    "Administrator": "Administrador",
+    "Administrator users can perform any action.": "Os usuários administradores podem executar qualquer ação.",
+    "Editor users have the ability to read, create, and update.": "Os usuários Editores têm a capacidade de ler, criar e atualizar.",
+    "read": "ler",
+    "create": "criar",
+    "update": "editar",
+    "delete": "excluir"
 }
