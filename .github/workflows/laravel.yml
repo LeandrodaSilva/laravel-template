@@ -40,31 +40,40 @@ jobs:
   deploy:
     needs: test
     runs-on: self-hosted
+    env:
+      workdir: /var/www/laravel-template
+
     steps:
       - uses: actions/checkout@v2
-      - name: Go to folder
-        run: cd /var/www/laravel-template
-      - name: List folder
-        run: ls
       - name: Change Group
         run: chown -R leandro:leandro .
+        working-directory: ${{env.workdir}}
       - name: Put Down
         run: php artisan down --no-interaction
+        working-directory: ${{env.workdir}}
       - name: Update folder
         run: git pull origin main
+        working-directory: ${{env.workdir}}
       - name: Install Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
+        working-directory: ${{env.workdir}}
       - name: Install Node Dependencies
         run: npm install
+        working-directory: ${{env.workdir}}
       - name: Build assets
         run: npm run prod
+        working-directory: ${{env.workdir}}
       - name: Run migration
         run: php artisan migrate --force
+        working-directory: ${{env.workdir}}
       - name: Optimize
         run: php artisan optimize
+        working-directory: ${{env.workdir}}
       - name: Put Up
         run: php artisan up
+        working-directory: ${{env.workdir}}
       - name: Change Group
         run: chown -R www-data:www-data .
+        working-directory: ${{env.workdir}}
 
 
