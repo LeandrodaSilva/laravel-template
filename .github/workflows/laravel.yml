@@ -64,5 +64,7 @@ jobs:
         run: php artisan optimize
       - name: Put Up
         run: php artisan up
+      - name: Change Group
+        run: chown -R www-data:www-data .
 
 
