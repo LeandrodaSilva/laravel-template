@@ -407,8 +407,8 @@
         }
     </style>
 
-    <script type="module">
-        import * as serviceWorker from '/service-worker.js';
+    <script>
+        const serviceWorker = require('./service-worker.js');
         serviceWorker.register();
     </script>
 </head>
