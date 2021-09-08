@@ -407,10 +407,7 @@
         }
     </style>
 
-    <script>
-        const serviceWorker = require('./service-worker.js');
-        serviceWorker.register();
-    </script>
+    <script src="/service-worker.js"></script>
 </head>
 <body class="antialiased">
 <div

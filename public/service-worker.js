@@ -20,7 +20,7 @@ const isLocalhost = Boolean(
     )
 );
 
-module.exports = function register(config) {
+function register(config) {
     if ('serviceWorker' in navigator) {
         // The URL constructor is available in all browsers that support SW.
         const publicUrl = new URL("https://laravel-template.leandrodasilva.dev", window.location.href);
@@ -126,10 +126,4 @@ function checkValidServiceWorker(swUrl, config) {
         });
 }
 
-module.exports = function unregister() {
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.ready.then((registration) => {
-            registration.unregister();
-        });
-    }
-}
+register();
