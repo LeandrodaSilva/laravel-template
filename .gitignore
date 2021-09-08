@@ -2,7 +2,6 @@
 /public/hot
 /public/storage
 /public/images
-/public/css
 /public/js
 /storage/*.key
 /vendor
@@ -16,3 +15,4 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/public/css/
