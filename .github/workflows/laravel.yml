@@ -75,5 +75,11 @@ jobs:
       - name: Change Group
         run: sudo chown -R www-data:www-data .
         working-directory: ${{env.workdir}}
+      - uses: actions/checkout@v2
+      - uses: Klemensas/action-autotag@stable
+        with:
+          GITHUB_TOKEN: "${{ secrets.PUSH_TOKEN }}"
+          tag_prefix: "v"
+          changelog_structure: "**{{messageHeadline}}** {{author}}\n"
 
 
