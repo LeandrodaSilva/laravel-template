@@ -23,7 +23,7 @@ jobs:
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Restore storage
-      run: sudo mv /home/leandro/storage storage
+      run: mv /home/leandro/storage storage
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
     - name: Directory Group
