@@ -26,6 +26,10 @@ jobs:
       run: php artisan storage:link
     - name: Optimize
       run: php artisan optimize
+    - name: Go to folder
+      run: cd /var/www/laravel-template || exit
+    - name: Update
+      run: git pull origin main
 #     - name: NPM install
 #       run: npm install
 #     - name: Generate assets
