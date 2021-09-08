@@ -407,7 +407,10 @@
         }
     </style>
 
-    <script src="/service-worker.js"></script>
+    <script type="module">
+        import register from "/service-worker";
+        register();
+    </script>
 </head>
 <body class="antialiased">
 <div
