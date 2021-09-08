@@ -1,5 +1,6 @@
 const path = require('path');
 let ImageminPlugin = require( 'imagemin-webpack-plugin' ).default;
+const {GenerateSW} = require('workbox-webpack-plugin');
 
 module.exports = {
     resolve: {
@@ -15,5 +16,6 @@ module.exports = {
             },
             test: /\.(jpe?g|png|gif|svg)$/i,
         } ),
+        new GenerateSW(),
     ],
 };
