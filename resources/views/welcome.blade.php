@@ -407,10 +407,8 @@
         }
     </style>
 
-    <script type="module">
-        import register from "/service-worker.js";
-        register();
-    </script>
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body class="antialiased">
 <div
