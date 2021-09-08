@@ -23,12 +23,6 @@ jobs:
         run: |
           mkdir -p database
           touch database/database.sqlite
-      - name: Go to folder
-        run: cd /var/www/laravel-template
-      - name: List folder
-        run: ls
-      - name: Update folder
-        run: git pull origin main
 
   test:
     needs: build
@@ -42,4 +36,21 @@ jobs:
           DB_CONNECTION: sqlite
           DB_DATABASE: database/database.sqlite
         run: vendor/bin/phpunit
+
+  deploy:
+    needs: test
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: Go to folder
+        run: cd /var/www/laravel-template
+      - name: List folder
+        run: ls
+      - name: Put Down
+        run: php artisan down --message 'The app is being (quickly!) updated. Please try again in a minute.'
+      - name: Update folder
+        run: git pull origin main
+      - name: Install Dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
 
