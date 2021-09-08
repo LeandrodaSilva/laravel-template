@@ -558,6 +558,5 @@
         </div>
     </div>
 </div>
-<script src="{{ mix('js/serviceWorker.js') }}" defer></script>
 </body>
 </html>
