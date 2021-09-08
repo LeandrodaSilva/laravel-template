@@ -25,6 +25,7 @@ jobs:
           touch database/database.sqlite
 
   test:
+    needs: build
     runs-on: self-hosted
     steps:
       - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
