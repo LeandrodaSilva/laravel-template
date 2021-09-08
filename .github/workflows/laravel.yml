@@ -41,13 +41,13 @@ jobs:
     needs: test
     runs-on: self-hosted
     env:
-      workdir: /var/www/laravel-template
+      workdir: /var/www/laravel-template/
 
     steps:
       - uses: actions/checkout@v2
-      - name: Change Group
-        run: chown -R leandro:leandro .
-        working-directory: ${{env.workdir}}
+#      - name: Change Group
+#        run: chown -R leandro:leandro .
+#        working-directory: ${{env.workdir}}
       - name: Put Down
         run: php artisan down --no-interaction
         working-directory: ${{env.workdir}}
@@ -72,8 +72,8 @@ jobs:
       - name: Put Up
         run: php artisan up
         working-directory: ${{env.workdir}}
-      - name: Change Group
-        run: chown -R www-data:www-data .
-        working-directory: ${{env.workdir}}
+#      - name: Change Group
+#        run: chown -R www-data:www-data .
+#        working-directory: ${{env.workdir}}
 
 
