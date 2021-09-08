@@ -45,7 +45,8 @@ jobs:
 
     steps:
       - name: Change Group
-        run: sudo chown -R leandro:leandro .
+        run: |
+              sudo chown -R leandro:leandro .
         working-directory: ${{env.workdir}}
       - name: Put Down
         run: php artisan down --no-interaction
