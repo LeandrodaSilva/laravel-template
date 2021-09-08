@@ -27,6 +27,4 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: true
 // });
 
-import * as SW from './service-worker.js';
-
-SW.register();
+require('./service-worker.js');

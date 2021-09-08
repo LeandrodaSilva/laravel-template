@@ -20,6 +20,7 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.copy( 'resources/images/public', 'public/images', false);
 mix.js('resources/js/service-worker.js', 'public')
+mix.js('resources/js/workbox-c0c7782e.js', 'public')
 
 if (mix.inProduction()) {
     mix.version();
