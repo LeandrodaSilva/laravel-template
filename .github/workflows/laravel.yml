@@ -46,7 +46,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Change Group
-        run: sudo ./home/leandro/chown_laravel_template_to_leandro.sh
+        run: sudo chown -R $(id -u):$(id -g) .
         working-directory: ${{env.workdir}}
       - name: Put Down
         run: php artisan down --no-interaction
@@ -73,7 +73,7 @@ jobs:
         run: php artisan up
         working-directory: ${{env.workdir}}
       - name: Change Group
-        run: sudo ./home/leandro/chown_laravel_template_to_www.sh
+        run: sudo chown -R www-data:www-data .
         working-directory: ${{env.workdir}}
 
 
