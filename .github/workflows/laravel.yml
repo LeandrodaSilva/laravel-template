@@ -10,6 +10,7 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
+    - uses: actions/checkout@v2
     - name: Go to Folder
       run: cd /var/www/laravel-template || exit
       shell: bash
