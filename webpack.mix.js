@@ -30,6 +30,7 @@ mix.js('resources/js/app.js', 'public/js')
     ]);
 
 mix.copy( 'resources/images/public', 'public/images', false);
+mix.js('resources/js/app/serviceWorker.js', 'public/js')
 
 if (mix.inProduction()) {
     mix.version();
