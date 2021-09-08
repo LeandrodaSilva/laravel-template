@@ -16,9 +16,6 @@ module.exports = {
             },
             test: /\.(jpe?g|png|gif|svg)$/i,
         } ),
-        new GenerateSW({
-            clientsClaim: true,
-            skipWaiting: true,
-        }),
+        new GenerateSW(),
     ],
 };
