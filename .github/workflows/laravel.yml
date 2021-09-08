@@ -10,6 +10,9 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
+    - name: Go to Folder
+      run: cd /var/www/laravel-template || exit
+      shell: bash
     - name: Run script file
       run: |
         chmod +x deploy.sh
