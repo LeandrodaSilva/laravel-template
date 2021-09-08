@@ -60,9 +60,9 @@ jobs:
       - name: Install Node Dependencies
         run: npm install
         working-directory: ${{env.workdir}}
-      - name: Build assets
-        run: npm run prod
-        working-directory: ${{env.workdir}}
+#      - name: Build assets
+#        run: npm run prod
+#        working-directory: ${{env.workdir}}
       - name: Run migration
         run: php artisan migrate --force
         working-directory: ${{env.workdir}}
