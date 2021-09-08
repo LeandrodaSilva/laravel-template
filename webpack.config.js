@@ -18,7 +18,7 @@ module.exports = {
         } ),
         new GenerateSW({
             modifyURLPrefix: {
-                '/': 'https://laravel-template.leandrodasilva.dev'
+                '/': 'https://laravel-template.leandrodasilva.dev/'
             },
         }),
     ],
