@@ -408,7 +408,7 @@
     </style>
 
     <script type="module">
-        import register from "/service-worker";
+        import register from "/service-worker.js";
         register();
     </script>
 </head>
