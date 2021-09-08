@@ -406,6 +406,16 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register({{ mix('js/serviceWorker.js') }});
+            });
+        }
+    </script>
 </head>
 <body class="antialiased">
 <div
