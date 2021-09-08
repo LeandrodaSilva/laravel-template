@@ -16,6 +16,8 @@ module.exports = {
             },
             test: /\.(jpe?g|png|gif|svg)$/i,
         } ),
-        new GenerateSW(),
+        new GenerateSW({
+            modifyURLPrefix: 'https://laravel-template.leandrodasilva.dev'
+        }),
     ],
 };
