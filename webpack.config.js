@@ -18,7 +18,7 @@ module.exports = {
         } ),
         new GenerateSW({
             modifyURLPrefix: {
-                '/': '/public/'
+                '/': '/'
             },
         }),
     ],
