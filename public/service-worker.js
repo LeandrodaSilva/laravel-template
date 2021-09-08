@@ -32,7 +32,7 @@ export function register(config) {
         }
 
         window.addEventListener('load', () => {
-            const swUrl = `https://laravel-template.leandrodasilva.dev/js/service-worker.js`;
+            const swUrl = `https://laravel-template.leandrodasilva.dev/service-worker.js`;
 
             if (isLocalhost) {
                 // This is running on localhost. Let's check if a service worker still exists or not.
