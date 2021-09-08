@@ -27,6 +27,8 @@ jobs:
         run: cd /var/www/laravel-template
       - name: List folder
         run: ls
+      - name: Update folder
+        run: git pull origin main
 
   test:
     needs: build
