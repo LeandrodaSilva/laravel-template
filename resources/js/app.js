@@ -1,5 +1,5 @@
 require('./bootstrap');
-import * as serviceWorker from "./app/serviceWorker";
+import * as serviceWorker from "./serviceWorker";
 serviceWorker.register();
 
 import Alpine from 'alpinejs';
