@@ -1,4 +1,4 @@
-/*! tailwindcss v2.2.9 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*! tailwindcss v2.2.11 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
 Document
@@ -1067,20 +1067,6 @@ select {
 .prose > :last-child {
 	margin-bottom: 0;
 }
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border-width: 0;
-}
-.pointer-events-none {
-	pointer-events: none;
-}
 .fixed {
 	position: fixed;
 }
@@ -1095,10 +1081,6 @@ select {
 	right: 0px;
 	bottom: 0px;
 	left: 0px;
-}
-.inset-y-0 {
-	top: 0px;
-	bottom: 0px;
 }
 .left-0 {
 	left: 0px;
@@ -1117,9 +1099,6 @@ select {
 }
 .z-50 {
 	z-index: 50;
-}
-.z-10 {
-	z-index: 10;
 }
 .col-span-6 {
 	grid-column: span 6 / span 6;
@@ -1245,12 +1224,6 @@ select {
 .h-20 {
 	height: 5rem;
 }
-.h-full {
-	height: 100%;
-}
-.max-h-56 {
-	max-height: 14rem;
-}
 .min-h-screen {
 	min-height: 100vh;
 }
@@ -1353,12 +1326,6 @@ select {
 .cursor-pointer {
 	cursor: pointer;
 }
-.select-none {
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
-}
 .list-inside {
 	list-style-position: inside;
 }
@@ -1389,9 +1356,6 @@ select {
 .justify-between {
 	justify-content: space-between;
 }
-.justify-items-center {
-	justify-items: center;
-}
 .gap-6 {
 	gap: 1.5rem;
 }
@@ -1415,9 +1379,6 @@ select {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-.overflow-auto {
-	overflow: auto;
 }
 .overflow-hidden {
 	overflow: hidden;
@@ -1553,9 +1514,6 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
-.bg-transparent {
-	background-color: transparent;
-}
 .bg-opacity-25 {
 	--tw-bg-opacity: 0.25;
 }
@@ -1625,10 +1583,6 @@ select {
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
 }
-.py-0 {
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
 .pt-6 {
 	padding-top: 1.5rem;
 }
@@ -1661,30 +1615,6 @@ select {
 }
 .pt-8 {
 	padding-top: 2rem;
-}
-.pr-10 {
-	padding-right: 2.5rem;
-}
-.pr-2 {
-	padding-right: 0.5rem;
-}
-.pr-9 {
-	padding-right: 2.25rem;
-}
-.pl-7 {
-	padding-left: 1.75rem;
-}
-.pr-12 {
-	padding-right: 3rem;
-}
-.pl-2 {
-	padding-left: 0.5rem;
-}
-.pr-7 {
-	padding-right: 1.75rem;
-}
-.text-left {
-	text-align: left;
 }
 .text-center {
 	text-align: center;
@@ -1727,9 +1657,6 @@ select {
 }
 .font-semibold {
 	font-weight: 600;
-}
-.font-normal {
-	font-weight: 400;
 }
 .uppercase {
 	text-transform: uppercase;
@@ -1906,9 +1833,6 @@ select {
 .duration-300 {
 	transition-duration: 300ms;
 }
-.duration-100 {
-	transition-duration: 100ms;
-}
 .ease-in-out {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1993,10 +1917,6 @@ select {
 	--tw-border-opacity: 1;
 	border-color: rgba(209, 213, 219, var(--tw-border-opacity));
 }
-.focus\:border-indigo-500:focus {
-	--tw-border-opacity: 1;
-	border-color: rgba(99, 102, 241, var(--tw-border-opacity));
-}
 .focus\:bg-indigo-600:focus {
 	--tw-bg-opacity: 1;
 	background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
@@ -2042,11 +1962,6 @@ select {
 	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
 	box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-.focus\:ring-1:focus {
-	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-	box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
 .focus\:ring-gray-300:focus {
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(209, 213, 219, var(--tw-ring-opacity));
@@ -2062,10 +1977,6 @@ select {
 .focus\:ring-blue-200:focus {
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(191, 219, 254, var(--tw-ring-opacity));
-}
-.focus\:ring-indigo-500:focus {
-	--tw-ring-opacity: 1;
-	--tw-ring-color: rgba(99, 102, 241, var(--tw-ring-opacity));
 }
 .focus\:ring-opacity-50:focus {
 	--tw-ring-opacity: 0.5;
@@ -2296,11 +2207,6 @@ select {
 
 	.sm\:text-right {
 		text-align: right;
-	}
-
-	.sm\:text-sm {
-		font-size: 0.875rem;
-		line-height: 1.25rem;
 	}
 }
 @media (min-width: 768px) {

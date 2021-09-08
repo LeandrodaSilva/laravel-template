@@ -1,4 +1,16 @@
 const mix = require('laravel-mix');
+let ImageminPlugin = require( 'imagemin-webpack-plugin' ).default;
+
+mix.webpackConfig( {
+    plugins: [
+        new ImageminPlugin( {
+            pngquant: {
+                quality: '95-100',
+            },
+            test: /\.(jpe?g|png|gif|svg)$/i,
+        } ),
+    ],
+} )
 
 /*
  |--------------------------------------------------------------------------
@@ -16,6 +28,8 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
     ]);
+
+mix.copy( 'resources/images/public', 'public/images', false);
 
 if (mix.inProduction()) {
     mix.version();

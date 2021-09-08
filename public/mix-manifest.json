@@ -1,4 +1,14 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/images/icon.png": "/images/icon.png",
+    "/images/icon_x128.png": "/images/icon_x128.png",
+    "/images/icon_x192.png": "/images/icon_x192.png",
+    "/images/icon_x384.png": "/images/icon_x384.png",
+    "/images/icon_x48.png": "/images/icon_x48.png",
+    "/images/icon_x512.png": "/images/icon_x512.png",
+    "/images/icon_x72.png": "/images/icon_x72.png",
+    "/images/icon_x96.png": "/images/icon_x96.png",
+    "/images/logo.png": "/images/logo.png",
+    "/images/print.png": "/images/print.png"
 }

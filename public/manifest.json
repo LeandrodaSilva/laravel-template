@@ -1,0 +1,29 @@
+{
+    "short_name": "Laravel",
+    "name": "Laravel Template",
+    "description": "Laravel Template",
+    "icons": [
+        {
+            "src": "/images/icon_x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/icon_x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#fff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#fff",
+    "screenshots": [
+        {
+            "src": "/images/print.png",
+            "type": "image/png",
+            "sizes": "1440x747"
+        }
+    ]
+}
