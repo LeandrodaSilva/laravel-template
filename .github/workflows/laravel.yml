@@ -15,13 +15,15 @@ jobs:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
         php-version: '8.0'
-    - name: Remove storage
-      run: rm -rf storage
+    - name: Backup storage
+      run: chmod -R 777 storage && mv storage /home/leandro/storage
     - uses: actions/checkout@v2
     - name: Copy .env
       run: ln -s /home/leandro/.env .env
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+    - name: Restore storage
+      run: mv /home/leandro/storage storage
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
     - name: Run migrations
