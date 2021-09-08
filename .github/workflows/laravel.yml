@@ -16,7 +16,7 @@ jobs:
       with:
         php-version: '8.0'
     - name: Backup storage
-      run: chmod -R 777 storage && mv storage /home/leandro/storage
+      run: mv storage /home/leandro/storage
     - uses: actions/checkout@v2
     - name: Copy .env
       run: ln -s /home/leandro/.env .env
