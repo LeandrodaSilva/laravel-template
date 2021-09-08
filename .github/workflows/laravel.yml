@@ -41,11 +41,12 @@ jobs:
     needs: test
     runs-on: self-hosted
     steps:
-    - uses: actions/checkout@v2
     - name: Go to folder
       run: cd /var/www/laravel-template || exit
+      shell: bash
     - name: Update
       run: git pull origin main
+      shell: bash
 #     - name: NPM install
 #       run: npm install
 #     - name: Generate assets
