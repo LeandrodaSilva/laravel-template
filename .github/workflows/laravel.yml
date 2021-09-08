@@ -51,6 +51,8 @@ jobs:
       - name: Put Down
         run: php artisan down --no-interaction
         working-directory: ${{env.workdir}}
+      - name: Stash
+        run: git stash
       - name: Update folder
         run: git pull origin main
         working-directory: ${{env.workdir}}
