@@ -42,7 +42,10 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: Go to folder
-      run: cd /var/www/laravel-template || exit
+      run: cd /var/www/laravel-template
+      shell: bash
+    - name: List folder
+      run: ls
       shell: bash
     - name: Update
       run: git pull origin main
