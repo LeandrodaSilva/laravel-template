@@ -46,11 +46,23 @@ jobs:
         run: cd /var/www/laravel-template
       - name: List folder
         run: ls
+      - name: Change Group
+        run: chown -R leandro:leandro .
       - name: Put Down
-        run: php artisan down --message 'The app is being (quickly!) updated. Please try again in a minute.'
+        run: php artisan down --no-interaction
       - name: Update folder
         run: git pull origin main
       - name: Install Dependencies
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      - name: Install Node Dependencies
+        run: npm install
+      - name: Build assets
+        run: npm run prod
+      - name: Run migration
+        run: php artisan migrate --force
+      - name: Optimize
+        run: php artisan optimize
+      - name: Put Up
+        run: php artisan up
 
 
