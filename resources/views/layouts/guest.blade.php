@@ -9,6 +9,9 @@
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000"/>
+        <link rel="apple-touch-icon" href="/images/icon_x192.png"/>
+        <meta name="og:title" content="{{ config('app.name', 'Laravel') }}" />
+        <meta name="twitter:card" content="summary_large_image" />
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
