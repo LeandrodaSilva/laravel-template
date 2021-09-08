@@ -58,6 +58,7 @@ jobs:
           git add -f public/
           git commit -m "Build front-end assets"
           git push -f origin deploy
+      - uses: actions/checkout@v2
       - name: Go to deploy folder
         run: cd /var/www/laravel-template
         shell: bash
