@@ -44,9 +44,9 @@ jobs:
       workdir: /var/www/laravel-template/
 
     steps:
+      - uses: actions/checkout@v2
       - name: Change Group
-        run: |
-              sudo chown -R leandro:leandro .
+        run: sudo chown -R $(id -u):$(id -g) .
         working-directory: ${{env.workdir}}
       - name: Put Down
         run: php artisan down --no-interaction
