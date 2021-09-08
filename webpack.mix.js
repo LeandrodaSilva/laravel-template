@@ -1,16 +1,4 @@
 const mix = require('laravel-mix');
-let ImageminPlugin = require( 'imagemin-webpack-plugin' ).default;
-
-mix.webpackConfig( {
-    plugins: [
-        new ImageminPlugin( {
-            pngquant: {
-                quality: '95-100',
-            },
-            test: /\.(jpe?g|png|gif|svg)$/i,
-        } ),
-    ],
-} )
 
 /*
  |--------------------------------------------------------------------------
