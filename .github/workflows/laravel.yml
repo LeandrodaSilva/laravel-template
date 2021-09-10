@@ -45,9 +45,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Change Group
-        run: sudo chown -R $(id -u):$(id -g) .
-        working-directory: ${{env.workdir}}
       - name: Put Down
         run: php artisan down --no-interaction
         working-directory: ${{env.workdir}}
@@ -73,9 +70,6 @@ jobs:
         working-directory: ${{env.workdir}}
       - name: Put Up
         run: php artisan up
-        working-directory: ${{env.workdir}}
-      - name: Change Group
-        run: sudo chown -R www-data:www-data .
         working-directory: ${{env.workdir}}
       - uses: actions/checkout@v2
       - uses: Klemensas/action-autotag@stable
